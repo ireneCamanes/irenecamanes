@@ -1,0 +1,449 @@
+
+body {
+    font-family: "PP Mori";
+    height: 100%;
+    overflow-x: hidden;
+    }
+  
+    .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 82px; 
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    }
+    .header-list-item {
+    list-style: none;
+    padding: 0;
+    gap: 0;
+    background-color: #fafafa;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    }
+    .header-list-item li {
+    cursor: pointer;
+    background-color: #fafafa;
+    margin-bottom: 0px;
+    }
+    .header-list-item li span {
+    color: #1e1e1c;
+    font-family: "PP Mori-ExtraLight", "PP Mori", sans-serif;
+    font-size: 20px;
+    background-color: #fafafa;
+    font-weight: 100;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    }
+    .header-list-item li.active span {
+    color: #1e1e1c;
+    font-family: "PP Mori-SemiBold", "PP Mori", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 0px;
+    text-decoration: underline;
+    }
+  
+    @media screen and (max-width: 600px) {
+    .nav {
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    }
+    .nav .header-list-item {
+    flex-direction: column;
+    gap: 20px; 
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    }
+    .column {
+    width: 100%;
+    }
+    }
+    .nav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000000; 
+    }
+    .hi {
+      height: 40rem;
+      display: flex;
+      align-items: center;
+  
+      position: relative; /* Set the container to relative positioning */
+    }
+    
+    canvas {
+      width: 100%; /* Use 100% width */
+      height: 100%; /* Use 100% height */
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 0%;
+  
+    }
+    .hi h1{
+      font-size: 7vw;
+      text-align: left;
+      font-weight: 100;
+      line-height: 1.2; 
+      margin-left: 4vw;
+      margin-right: 4vw;
+    }
+  
+    .hi {
+      cursor: url('http://www.rw-designer.com/icon-image/17149-32x32x32.png'), auto;
+   }
+   
+    
+    
+    
+    .section-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px solid #000;
+    }
+    .divider {
+    margin: 0;
+    width: 100%;
+    border-top: 2px solid #000;
+    justify-content: center;
+    }
+    .works {
+    height:fit-content;
+    cursor: none;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    }
+    .work-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    }
+    a{
+      text-decoration: none;
+      color:#1e1e1c
+    }
+    .work-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: -1;
+    }
+    .work-container:hover::before {
+    background-color: #cdcdcd;
+    }
+    .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; 
+    }
+    .work-item:hover .image {
+    opacity: 1;
+    }
+    .work-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    position: relative; 
+    }
+    .work-details {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    hr {
+    margin: 0;
+    width: 100%;
+    border-top: 1px solid #000;
+    justify-content: center;
+    }
+    h2 {
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-weight: 400;
+    line-height: 1.2; 
+    }
+    p {
+    font-size: 20px;
+    text-align: right; 
+    margin-left: 4vw;
+    margin-right: 4vw;
+    font-weight: 100;
+    }
+    .about {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    width: 100%;
+    height:fit-content;
+    background-color: #000000;
+    box-sizing: border-box;
+    }
+    .about-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    }
+    h3{
+    font-size: min(max(15px, 3vw), 35px);
+    justify-items:left;
+    font-weight: 300;
+    color: #ffffff;
+    }
+    .image-me img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: cover; 
+    margin-bottom: 4vw;
+    }
+    .about-gif {
+    flex: 1; 
+    transform: rotate(-0.891deg);
+    box-sizing: border-box; 
+    }
+    .about-gif img {
+    max-width: 80%;
+    max-height: 100%;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    object-fit: contain;
+    width: 100%; 
+    height: auto; 
+    }
+    h4 {
+    font-size: min(max(15px, 2vw), 25px);
+    font-weight: 100;
+    line-height: 135%;
+    letter-spacing: -0.45px;
+    text-align: left; 
+    color: #ffffff;
+    }
+    .parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto auto auto auto; 
+    grid-gap: 0;
+    }
+    .div1 {
+    grid-area: 1 / 1 / 2 / 3; 
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin-top: 2vw;
+    }
+    .div2 {
+    grid-area: 2 / 1 / 6 / 2; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 4vw;
+    margin-left: 8vw;
+    min-width: 100px;
+    }
+    .div3 {
+    grid-area: 2 / 2 / 2 / 3; 
+    box-sizing: border-box;
+    }
+    .div4 {
+    grid-area: 3 / 2 / 3 / 3; 
+    padding: 0 4vw;
+    box-sizing: border-box;
+    }
+    .div5 {
+    grid-area: 4 / 2 / 4 / 3; 
+    padding: 0 4vw;
+    box-sizing: border-box;
+    margin-bottom: 2rem; 
+    margin-top: 0%;
+    }
+    .arrow-diagonal {
+    width: 6.5%;
+    height: 6.5%;
+    }
+    .contact {
+    margin-top: 2rem; 
+    }
+    .contact .frame-15 {
+    display: flex;
+    flex-grow: 1; 
+    }
+    .contact .frame-15 .cama-es-irene-gmail-com {
+    color: white; 
+    margin-left: 4%; 
+    white-space: nowrap; 
+    }
+    .cama-es-irene-gmail-com {
+    margin-left: 10px; 
+    font-size: 2.8vw;
+    }
+    .hover-link {
+    color: white;
+    text-decoration: none;
+    transition: font-size 0.3s;
+    }
+    .hover-link:hover {
+    font-size: 2.6vw;
+    }
+    .line-7 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%; 
+    max-width: 6055555555550px; 
+    height: 2px;
+    background-color: white; 
+    margin-top: 10px;
+    margin-bottom: 5%;
+    }
+    .links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem; 
+    }
+    .link {
+    margin-top: 0.5rem; 
+    }
+    .linkedin,
+    .behance {
+    color: white;
+    text-decoration: none; 
+    font-size: 16px; 
+    }
+    .linkedin:hover,
+    .behance:hover {
+    text-decoration: underline;
+    }
+    @media screen and (max-width: 650px) {
+  
+    .parent {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    }
+    .div1, .div2, .div3, .div4, .div5 {
+    width: 100%; 
+    }
+    .div1 {
+    grid-area: 1 / 1 / 2 / 3; 
+    }
+    .div2 {
+    order: 3; 
+    margin-bottom: 1rem; 
+    }
+    .div3 {
+    order: 2; 
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    object-fit: contain;
+    width: 100%; 
+    height: auto; 
+    }
+    .div4 {
+    order: 2; 
+    margin: 0;
+    }
+    .div5 {
+    order: 4; 
+    margin-top: 0%;
+    }
+    h3{
+    font-size: min(max(15px, 4vw), 35px);
+    justify-items:left;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    }
+    h4 {
+    font-size: min(max(15px, 2vw), 25px);
+    font-weight: 100;
+    line-height: 135%;
+    letter-spacing: -0.45px;
+    text-align: left; 
+    color: #ffffff;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    }
+    .image-me img {
+    width: 90%; 
+    }
+    .about-gif img {
+    max-width: 93%;
+    max-height: 100%;
+    margin-top: -60px;
+    margin-bottom: -30px;
+    object-fit: contain;
+    height: auto; 
+    }
+    .arrow-diagonal {
+    width: 15px;
+    height: 15px;
+    }
+    .contact {
+    margin-top: 2rem; 
+    margin-left: 4vw;
+    margin-right: 4vw;
+    }
+    .contact .frame-15 {
+    display: flex;
+    flex-grow: 1; 
+    }
+    .contact .frame-15 .cama-es-irene-gmail-com {
+    color: white; 
+    margin-left: 8px; 
+    white-space: nowrap; 
+    }
+    .cama-es-irene-gmail-com {
+    margin-left: 10px; 
+    font-size: 120%;
+    }
+    .line-7 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%; 
+    max-width: 260px; 
+    height: 2px;
+    background-color: white; 
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    }
+    }
